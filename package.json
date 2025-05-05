@@ -1,0 +1,27 @@
+{
+  "name": "n8n-chat-widget",
+  "version": "1.0.0",
+  "description": "Nowoczesny widget czatu dla platformy N8N",
+  "main": "style.css",
+  "files": [
+    "style.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forgecikk/mojlidget.git"
+  },
+  "keywords": [
+    "n8n",
+    "chat",
+    "widget",
+    "css"
+  ],
+  "author": "forgecikk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/forgecikk/mojlidget/issues"
+  },
+  "homepage": "https://github.com/forgecikk/mojlidget#readme"
+} 
