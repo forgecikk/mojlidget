@@ -185,30 +185,33 @@
   outline: none;
 }
 
-/* Nagłówek czatu */
+/* Nagłówek czatu - wersja kompaktowa */
 .chat-layout .chat-header {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background: var(--chat--color-dark);
   color: var(--chat--color-white);
   border-radius: var(--chat--border-radius) var(--chat--border-radius) 0 0;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  min-height: unset;
+  gap: 0;
+  height: 2.2rem;
 }
 
 .chat-layout .chat-header h1 {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin: 0;
   font-family: var(--chat--font-family);
-  line-height: 1.4;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat-layout .chat-header p {
-  font-size: 0.875rem;
-  margin: 0;
-  opacity: 0.9;
-  line-height: 1.4;
+  display: none;
 }
 
 /* Lista wiadomości */
