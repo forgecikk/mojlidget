@@ -1,0 +1,155 @@
+:root {
+	/* Primary colors - changed to Voiceflow blue */
+	--chat--color-primary: #397dff;
+	--chat--color-primary-shade-50: #2f68db;
+	--chat--color-primary-shade-100: #2857c4;
+	
+	/* Secondary colors */
+	--chat--color-secondary: #38414a;
+	--chat--color-secondary-shade-50: #2b3239;
+	--chat--color-secondary-shade-100: #1f2429;
+	
+	/* Basic colors */
+	--chat--color-white: #ffffff;
+	--chat--color-light: #f1f2f2; /* Changed to match Voiceflow light gray */
+	--chat--color-light-shade-50: #e2e4e5; /* Adjusted to match Voiceflow */
+	--chat--color-light-shade-100: #c5c9ca; /* Adjusted to match Voiceflow */
+	--chat--color-medium: #9aa1a3; /* Adjusted to match Voiceflow */
+	--chat--color-dark: #1a1e23; /* Changed to match Voiceflow dark color */
+	--chat--color-disabled: #656d75; /* Changed to match Voiceflow disabled color */
+	--chat--color-typing: #515a63; /* Changed to match Voiceflow typing color */
+
+	/* Spacing and dimensions */
+	--chat--spacing: 1rem;
+	--chat--border-radius: 10px; /* Increased to match Voiceflow's rounded corners */
+	--chat--transition-duration: 0.15s;
+
+	/* Window size */
+	--chat--window--width: 400px;
+	--chat--window--height: 600px;
+
+	/* Header styling */
+	--chat--header-height: auto;
+	--chat--header--padding: var(--chat--spacing);
+	--chat--header--background: var(--chat--color-primary); /* Changed to primary color */
+	--chat--header--color: var(--chat--color-white);
+	--chat--header--border-top: none;
+	--chat--header--border-bottom: none;
+	--chat--header--border-bottom: none;
+	--chat--header--border-bottom: none;
+	--chat--heading--font-size: 1.5em; /* Reduced from 2em to match Voiceflow */
+	--chat--header--color: var(--chat--color-white);
+	--chat--subtitle--font-size: 0.875em; /* Changed to match Voiceflow */
+	--chat--subtitle--line-height: 1.5; /* Adjusted to match Voiceflow */
+
+	/* Input area */
+	--chat--textarea--height: 40px; /* Adjusted to match Voiceflow */
+
+	/* Message styling */
+	--chat--message--font-size: 0.875rem; /* Changed to 14px (0.875rem) to match Voiceflow */
+	--chat--message--padding: 0.75rem 1rem; /* Adjusted padding to match Voiceflow */
+	--chat--message--border-radius: 10px; /* Increased to match Voiceflow */
+	--chat--message-line-height: 1.5; /* Adjusted to match Voiceflow */
+	--chat--message--bot--background: #f1f2f2; /* Changed to Voiceflow bot message color */
+	--chat--message--bot--color: var(--chat--color-dark);
+	--chat--message--bot--border: none;
+	--chat--message--user--background: var(--chat--color-primary); /* Changed to primary color */
+	--chat--message--user--color: var(--chat--color-white);
+	--chat--message--user--border: none;
+	--chat--message--pre--background: rgba(0, 0, 0, 0.05);
+
+	/* Toggle button styling */
+	--chat--toggle--background: var(--chat--color-primary);
+	--chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+	--chat--toggle--active--background: var(--chat--color-primary-shade-100);
+	--chat--toggle--color: var(--chat--color-white);
+	--chat--toggle--size: 48px; /* Reduced from 64px to match Voiceflow */
+	--chat--toggle--border-radius: 50%; /* Added to make the toggle button round */
+	
+	/* Box shadow for popup window - added to match Voiceflow */
+	--chat--window--box-shadow: 0 0 0 1px #161a1e0f, #161a1e29 0 8px 80px;
+	
+	/* Font family - added to match Voiceflow */
+	--chat--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Additional custom styles to better match Voiceflow */
+.n8n-chat-window {
+	border-radius: 16px !important;
+	box-shadow: var(--chat--window--box-shadow) !important;
+	overflow: hidden !important;
+	font-family: var(--chat--font-family) !important;
+}
+
+.n8n-chat-toggle {
+	border-radius: 50% !important;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.05), 0 8px 42px -16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.n8n-chat-input {
+	border-radius: 25px !important;
+	border: 1px solid #E2E4E5 !important;
+	background-color: #fff !important;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.01), 0 8px 42px -16px rgba(0, 0, 0, 0.08) !important;
+	transition: border .15s ease, box-shadow .15s ease !important;
+}
+
+.n8n-chat-input:hover {
+	border: 1px solid #D4D7D7 !important;
+}
+
+.n8n-chat-input:focus-within {
+	box-shadow: inset 0 0 0 2px var(--chat--color-primary) !important;
+}
+
+.n8n-chat-send-button {
+	border-radius: 50% !important;
+	background-color: var(--chat--color-primary) !important;
+	transition: transform .15s ease !important;
+}
+
+.n8n-chat-send-button:hover {
+	transform: scale(1.1) !important;
+}
+
+.n8n-chat-send-button:active {
+	transform: scale(0.8) !important;
+}
+
+.n8n-chat-typing-indicator {
+	display: inline-flex !important;
+	gap: 5px !important;
+}
+
+.n8n-chat-typing-indicator span {
+	width: 7px !important;
+	height: 7px !important;
+	border-radius: 50% !important;
+	background-color: #9aa1a3 !important;
+	animation: n8n-chat-typing 1s infinite !important;
+}
+
+.n8n-chat-typing-indicator span:nth-child(2) {
+	animation-delay: 333ms !important;
+}
+
+.n8n-chat-typing-indicator span:nth-child(3) {
+	animation-delay: 666ms !important;
+}
+
+@keyframes n8n-chat-typing {
+	25% {
+		background-color: #6e797b;
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(1);
+		background-color: #9aa1a3;
+	}
+	75% {
+		background-color: #c5c9ca;
+	}
+	to {
+		background-color: #9aa1a3;
+	}
+}
